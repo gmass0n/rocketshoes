@@ -1,29 +1,29 @@
 import React from 'react';
-import { withNavigation } from 'react-navigation';
+import { connect } from 'react-redux';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-import {
-  Container,
-  Logo,
-  ItemCount,
-  TouchableOpacity,
-} from './styles';
+import { Wrapper, Container, Logo, BasketContainer, ItemCount } from './styles';
 
-function Header({ navigation }) {
+function Header({ navigation, cartSize }) {
   return (
-    <Container>
-      <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+    <Wrapper>
+      <Container>
         <Logo />
-      </TouchableOpacity>
-
-      <TouchableOpacity onPress={() => navigation.navigate('Cart')}>
-        <Icon name="shopping-basket" color="#FFF" size={24} />
-
-        <ItemCount>0</ItemCount>
-      </TouchableOpacity>
-    </Container>
+        <BasketContainer onPress={() => navigation.navigate('Cart')}>
+          <Icon name="shopping-basket" color="#FFF" size={24} />
+          <ItemCount>{cartSize || 0}</ItemCount>
+        </BasketContainer>
+      </Container>
+    </Wrapper>
   );
 }
 
-export default withNavigation(Header);
+export default connect(
+  state => ({
+    cartSize: state.cart.length,
+  }),
+  null
+)(Header);
+
+// export default Header;
