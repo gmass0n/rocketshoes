@@ -1,5 +1,7 @@
 <p align="center">
+  <p align="center">
   <img src="./.github/logo.png" alt="Logo">
+   </p>
   <h3 align="center">RocketShoes</h3>
   <p align="center">
   Aplicação desenvolvida no GoStack 9.0, WEB e Mobile tem as mesmas funcionalidades, criação de um E-Commerce para melhorar as habilidades em Redux.
