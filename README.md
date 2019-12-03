@@ -5,6 +5,6 @@
   Aplicação desenvolvida no GoStack 9.0 onde o WEB será o prestador e receberá os agendamentos, a o Mobile seráo cliente e fará os agendamentos.
   </p>
   <a align="center" href="https://github.com/gmass0n/gobarber">
-    <img src="./.github/web-mobile.png" alt="Main">
+    <img src="./.github/web-mobile.png" alt="Main" height="500">
   </a>
 </p>
